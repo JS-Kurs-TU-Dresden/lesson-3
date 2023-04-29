@@ -39,198 +39,137 @@
     ]
 ]
 
-== Discord
-
-https://discord.gg/W3QJrBwD6Z
-
-#align(center, [
-    #image("./qrcode.png", width: 200pt)
-])
-
-
 == What learned we last Week?
 
-- Variables #raw("let x = 1", lang: "js")
-- Data Types `number`, `string`, `boolean`, `null`, `undefined`
-- Conversion between data types `Number()`, `String()`, `Boolean()`
-- Operators `+`, `-`, `*`, `/`, `%`
-- Debugging with #raw("console.log()", lang: "js")
-- Comments `//` and `/* */`
-- Run using `node file.js` and test with `npm run test file`
+- Comparisons `1 > 2`, `'a' !== 'b'`
+- Branching #raw("if (condition) { ... } else { ... }", lang: "js")
+- Loops #raw("while (condition) { ... }", lang: "js"), #raw("for (let i = 0; i < 10; i++) { ... }", lang: "js")
+- Logical Operators `&&`, `||`, `!`
+- Prompt #raw("let answer = prompt('What is your name?')", lang: "js")
 
-#hint("Dont forget to commit and push your changes")
+#hint("Dont forget to commit and push your changes.")
 
 == Goals of this week
 
-- Comparing values
-- Conditional Statements
-- Loops
-- Logical Operators
-- Prompts
+- Functions
+- Function Arguments
+- Return Values
+- Function Scope
+- Function Hoisting
+- Function Expressions
+- Arrow Functions
 
-== Loose Comparison
-
-```js
-1 == 1 // true
-1 == 2 // false
-
-1 != 1 // false
-1 != 2 // true
-
-1 < 2 // true
-1 > 2 // false
-
-const isEqual = 11 == 10 // isEqual = false
-```
-
-When comparing two values of different types, JavaScript will try to convert one type into the other type. 
-
- ```js
-1 == "1" // true
-0 == false // true
-
-"false" != true // false
-1 != true // false
-```
-
-== Strict Comparison
+== Functions
 
 ```js
-1 === 1 // true
-1 === 2 // false
-1 !== 1 // false
-1 !== 2 // true
+function functionName(parameter1, parameter2) {
+    // code to be executed
+}
 
-1 < 2 // true
-1 > 2 // false
-
-const isEqual = 11 === 10 // isEqual = false
+functionName(argument1, argument2);
 ```
 
-#hint("Use strict comparison whenever possible")
+```js
+function add(a, b) {
+    return a + b;
+}
 
-== Conditional Statements
+let result = add(1, 2); // result = 3
+```
+
+== Function Arguments
+
+```js
+let message = "Hello World";
+
+function formatMessage(msg) {
+    return "!" + msg + "!";
+}
+
+console.log(formatMessage(message)); // !Hello World!
+console.log(message); // Hello World
+```
+
+== Return Values
 
 #columns(2, [
     ```js
-if (condition) {
-    // do something
+function isAdult(age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-if (condition) {
-    // do something
-} else {
-    // do something else
-}
+isAdult(17); // false
 ```
 #colbreak()
 ```js
-if (condition) {
-    // do something
-} else if (condition) {
-    // do something else
-} else {
-    // do something else
+function add(a, b) {
+   if(typeof a !== 'number') {
+       return;
+   }
+   if(typeof b !== 'number') {
+       return;
+   }
+    return a + b;
 }
 ```
 ])
-=== Example
+
+== Function Scope
 
 ```js
-const x = 1
-if (x === 1) {
-    console.log("x is 1")
-} else if (x === 2) {
-    console.log("x is 2")
-} else {
-    console.log("x is not 1 or 2")
+let message = "Hello World";
+
+function formatMessage() {
+    console.log(message); // Hello World
+
+    let message = "Hello Universe";
+
+    console.log(message); // Hello Universe
 }
 ```
 
-== Logical Operators
+=== Function Expressions
 
-```js
-&& // and
-```
-```js
-|| // or
-```
-```js
-! // not
-```
-
-```js
-const x = 1; const y = 2;
-
-if (x === 1 && y !== 2) {
-    // do something
-}
-
-if (!(x === 1) || y === 2) {
-    // do something
-}
-```
-== Loops
 #columns(2, [
     ```js
-while (condition) {
-    // do something
+let add = function(a, b) {
+    return a + b;
 }
-do {
-    // do something
-} while (condition)
 
-for (let i = 0; i < 10; i++) {
-    // do something
-}
+add(1, 2); // 3
 ```
+
 #colbreak()
+
 ```js
-while(true) {
-    // do something
-    if (condition) { break }
+function callTwice(fn) {
+    fn();
+    fn();
 }
 
-for(let i = 0; i < 10; i++) {
-    if (condition) { continue }
-    // do something
-}
+callTwice(function() {
+    console.log("Hello World");
+});
+
+// Hello World
+// Hello World
 ```
 ])
 
-== Example
+=== Arrow Functions
 
 ```js
-let i = 0
-while (i < 10) {
-    console.log(i)
-    i++
+let add = (a, b) => {
+    return a + b;
 }
 
-for (let i = 0; i < 10; i++) {
-    console.log(i)
-}
+add(1, 2); // 3
 ```
 
-== Prompt
-
-Get user input from the console.
-
-```js
-// Needed to access the prompt function
-import { prompt } from "../prompt.js"
-
-const name = prompt("What is your name?")
-console.log("Your name is: " + name)
-```
-
-#hint([
-    The function is normally not available in Node.js.
-])
-
-#hint([
-    The function always returns a string.
-])
 
 == Tasks and Points
 Goal is to get 100 Points.
