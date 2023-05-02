@@ -10,7 +10,7 @@ import { prompt } from '../prompt.js'
 // 7. Repeat steps 3-6 until the user enters "DONE" as the item name.
 
 // In order to make this easier for yourself, write 2 functions:
-// 1. buyItem(money, item) - returns the money left after buying the item. If the user can't afford the item, return the money they have without subtracting the price.
+// 1. buyItem(item) - returns the money left after buying the item. If the user can't afford the item, return the money they have without subtracting the price.
 // 2. findItemIndex(item) - returns the index of the item in the items array. If the item is not found, return -1.
 
 
@@ -29,13 +29,13 @@ while(true) {
         break;
     }
 
-    money = buyItem(money, item);
+    money = buyItem(item);
 
 
     item = prompt("What do you want to buy? ");
 }
 
-function buyItem(money, item) {
+function buyItem(item) {
     const index = findItemIndex(item);
 
     if(index === -1) {
@@ -64,4 +64,15 @@ function printItems() {
     for(let i = 0; i < items.length; i++) {
         console.log(items[i] + " - " + prices[i] + " Euro");
     }
+}
+
+
+// Please do not change the code below. This code is used for testing your solution.
+
+const changeMoney = newMoney => money = newMoney
+
+export {
+    buyItem,
+    findItemIndex,
+    changeMoney
 }

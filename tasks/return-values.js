@@ -1,7 +1,6 @@
 // Replace the (___) with the correct values to make the code work.
 
 
-
 function findWithChar(arrayOfStrings, value) {
     if(arrayOfStrings.length === 0) {
         return
@@ -18,3 +17,19 @@ function findWithChar(arrayOfStrings, value) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+// Please do not change the code below. This code is used for testing your solution.
+
+export {
+    findWithChar
+}

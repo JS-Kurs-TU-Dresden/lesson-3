@@ -4,7 +4,7 @@ import { prompt } from '../prompt.js'
 // See https://en.wikipedia.org/wiki/Tic-tac-toe
 
 // 1. Create a 3x3 grid and use the printGrid function to print it
-// 2. Ask the user to enter the coordinates of the cell they want to mark
+// 2. Ask the user to enter the coordinates of the cell they want to mark (x and y in 2 separate prompts)
 // 3. If the cell is already marked, print "This cell is already marked"
 // 4. If the coordinates are invalid, print "Invalid coordinates"
 // 5. Repeat steps 2-4 until the grid is full
@@ -14,7 +14,7 @@ import { prompt } from '../prompt.js'
 // 2. checkWin() - returns the player that has won the game. If there is no winner yet, return undefined.
 
 // You can use the following variables:
-const grid = [
+let grid = [
     [" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]
@@ -99,4 +99,25 @@ function printGrid() {
     }
 
     console.log("Next player: " + player);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Please do not change the code below. This code is used for testing your solution.
+const changeGrid = (newGrid) => grid = newGrid
+
+export {
+    grid, markCell, checkWin, changeGrid
 }

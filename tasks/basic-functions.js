@@ -23,7 +23,7 @@ function findMaxOfThree(num1, num2, num3) {
 }
 
 function factorial(num) {
-    if(num === 1) {
+    if(num <= 1) {
         return 1;
     }
 
@@ -38,4 +38,22 @@ function startsWith(string, substring) {
     }
 
     return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Please do not change the code below. This code is used for testing your solution.
+
+export {
+    calculateArea, isEven, findMaxOfThree, factorial, startsWith
 }

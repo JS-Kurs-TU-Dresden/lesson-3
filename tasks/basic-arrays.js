@@ -11,9 +11,7 @@ const temp = numbers[1];
 numbers[1] = numbers[4];
 numbers[4] = temp;
 
-const sum = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4];
-
-function sumOfArray(array) {
+function sum(array) {
     let result = 0;
 
     for(let i = 0; i < array.length; i++) {
@@ -23,4 +21,26 @@ function sumOfArray(array) {
     return result;
 }
 
-const sumWithFunction = sumOfArray(numbers);
+const sumResult = sum(numbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Please do not change the code below. This code is used for testing your solution.
+
+export {
+    first, last, sum, sumResult
+}

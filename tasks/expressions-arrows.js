@@ -14,3 +14,21 @@ const map = (array, callback) => {
 
     return result;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Please do not change the code below. This code is used for testing your solution.
+
+export {
+    map, addBrackets
+}
