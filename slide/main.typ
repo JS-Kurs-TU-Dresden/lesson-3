@@ -52,12 +52,13 @@
 == Goals of this week
 
 - Functions
-- Function Arguments
-- Return Values
-- Function Scope
-- Function Hoisting
+  - Arguments / Default Arguments
+  - Return Values
+  - Scope
+  - Hoisting
 - Function Expressions
 - Arrow Functions
+- Basic Arrays
 
 == Functions
 
@@ -128,6 +129,11 @@ function add(a, b = 0) {
 add(1); // 1
 add(1, 2); // 3
 ```
+\
+\
+#hint([
+    Default arguments are only used if the argument is `undefined`.
+])
 
 == Function Scope
 
@@ -143,7 +149,7 @@ function formatMessage() {
 }
 ```
 
-=== Function Expressions
+== Function Expressions
 
 #columns(2, [
     ```js
@@ -158,8 +164,7 @@ add(1, 2); // 3
 
 ```js
 function callTwice(fn) {
-    fn();
-    fn();
+    fn(); fn();
 }
 
 callTwice(function() {
@@ -184,6 +189,57 @@ add(1, 2); // 3
 sub(1, 2); // -1
 ```
 
+== Function Hoisting
+
+```js
+console.log(appendA("Hello ")); // Hello A
+console.log(appendB("Hello ")); // TypeError: appendB is not a function
+
+function appendA(a ) {
+    return a + "A";
+}
+
+const appendB = (a) => a + "B";
+```
+
+== Basic Arrays
+
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+console.log(numbers[0]); // 1
+console.log(numbers[1]); // 2
+console.log(numbers[2]); // 3
+console.log(numbers[3]); // 4
+console.log(numbers[4]); // 5
+console.log(numbers[5]); // undefined
+console.log(numbers.length); // 5
+```
+
+== Strings are Arrays
+
+```js
+let message = "Hello World";
+// same as
+// ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"];
+console.log(message[0]); // H
+console.log(message[1]); // e
+console.log(message[9]); // l
+console.log(message[10]); // d
+console.log(message[11]); // undefined
+
+console.log(message.length); // 11
+```
+
+== Modifying Arrays
+
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+numbers[0] = 10;
+
+console.log(numbers); // [10, 2, 3, 4, 5]
+```
 
 == Tasks and Points
 Goal is to get 100 Points.
