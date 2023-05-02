@@ -118,6 +118,17 @@ function add(a, b) {
 ```
 ])
 
+== Default Arguments
+
+```js
+function add(a, b = 0) {
+    return a + b;
+}
+
+add(1); // 1
+add(1, 2); // 3
+```
+
 == Function Scope
 
 ```js
@@ -163,11 +174,14 @@ callTwice(function() {
 === Arrow Functions
 
 ```js
-let add = (a, b) => {
-    return a + b;
+let add = (a, b) => a + b
+
+let sub = (a, b) => {
+    return a - b;
 }
 
 add(1, 2); // 3
+sub(1, 2); // -1
 ```
 
 
