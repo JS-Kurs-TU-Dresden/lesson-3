@@ -1,27 +1,28 @@
 // Replace the (___) with the correct values to make the code work.
+// For more info, see: https://javascript.info/function-basics#default-values
 
-function substring(string, start = 0, end = string.length) {
+function substring(string, start = ___, end = ___) {
     let result = "";
 
     if(start < 0) {
-        start = 0;
+        ___
     }
 
     for(let i = start; i < end; i++) {
-        result += string[i];
+        ___
     }
 
     return result;
 }
 
-function repeat(string, times = 2) {
+function repeat(string, times = ___) {
     let result = "";
 
-    for(let i = 0; i < times; i++) {
-        result += string;
+    for(let i = 0; ___; i++) {
+        ___
     }
 
-    return result;
+    ___
 }
 
 

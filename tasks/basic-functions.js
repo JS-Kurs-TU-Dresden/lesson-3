@@ -1,43 +1,51 @@
 // Replace the (___) with the correct values to make the code work.
+// For more info, see: https://javascript.info/function-basics
 
+// Example: calculateArea(5, 10) should return 50
 function calculateArea(width, height) {
-    return width * height;
+    return ___;
 }
 
+// Example: isEven(4) should return true
 function isEven(num) {
-    if(num % 2 === 0) {
-        return true;
+    if(___) {
+        ___
     } else {
-        return false;
+        ___
     }
 }
 
-function findMaxOfThree(num1, num2, num3) {
-    if(num1 > num2 && num1 > num3) {
-        return num1;
-    } else if(num2 > num1 && num2 > num3) {
-        return num2;
+// Example: findMaxOfThree(5, 10, 1) should return 10
+function findMaxOfThree(___) {
+    if(___) {
+        return ___;
+    } else if(___) {
+        return ___;
     } else {
-        return num3;
+        return ___;
     }
 }
 
+// Example: factorial(5) should return 120
+// Hint: a function can call itself
 function factorial(num) {
     if(num <= 1) {
         return 1;
     }
 
-    return num * factorial(num - 1);
+    return ___;
 }
 
+// Example: startsWith('Hello', 'He') should return true
+//          startsWith('Hello', 'he') should return false
 function startsWith(string, substring) {
     for(let i = 0; i < substring.length; i++) {
-        if(string[i] !== substring[i]) {
-            return false;
+        if(___) {
+            ___
         }
     }
 
-    return true;
+    ___
 }
 
 

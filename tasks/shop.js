@@ -17,54 +17,38 @@ import { prompt } from '../prompt.js'
 const items =  ["Bread", "Milk", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 const prices = [      1,      3,      2,            1,      1,       2,     3];
 
-let money = Number(prompt("How much money do you have? "));
-
-printItems();
-
-let item = prompt("What do you want to buy? ");
-
-while(true) {
-
-    if(item === "DONE") {
-        break;
-    }
-
-    money = buyItem(item);
+// function buyItem(item) ...
 
 
-    item = prompt("What do you want to buy? ");
-}
 
-function buyItem(item) {
-    const index = findItemIndex(item);
 
-    if(index === -1) {
-        console.log("Sorry, we don't have that item")
-        return money;
-    } else if(money >= prices[index]) {
-        console.log("You bought " + item);
-        return money - prices[index];
-    } else {
-        console.log("Sorry, you don't have enough money");
-        return money;
-    }
-}
 
-function findItemIndex(item) {
-    for(let i = 0; i < items.length; i++) {
-        if(items[i] === item) {
-            return i;
-        }
-    }
-
-    return -1;
-}
 
 function printItems() {
     for(let i = 0; i < items.length; i++) {
         console.log(items[i] + " - " + prices[i] + " Euro");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Please do not change the code below. This code is used for testing your solution.

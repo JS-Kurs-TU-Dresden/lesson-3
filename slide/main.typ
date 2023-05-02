@@ -46,7 +46,7 @@
 - Loops #raw("while (condition) { ... }", lang: "js"), #raw("for (let i = 0; i < 10; i++) { ... }", lang: "js")
 - Logical Operators `&&`, `||`, `!`
 - Prompt #raw("let answer = prompt('What is your name?')", lang: "js")
-
+\
 #hint("Dont forget to commit and push your changes.")
 
 == Goals of this week
@@ -84,7 +84,8 @@ let result = add(1, 2); // result = 3
 let message = "Hello World";
 
 function formatMessage(msg) {
-    return "!" + msg + "!";
+    msg = "!" + msg + "!";
+    return msg;
 }
 
 console.log(formatMessage(message)); // !Hello World!
@@ -244,15 +245,11 @@ console.log(numbers); // [10, 2, 3, 4, 5]
 == Tasks and Points
 Goal is to get 100 Points.
 #columns(2, [
-- `basic-branching` 20
-- `basic-logical-operators` 20
-- `basic-comparisons` 20
-- `basic-loops` 20
-- `basic-prompt` 20
-- `calculator` 30
-- `fibonacci` 30
-- `fizzbuzz` 30
-- `pyramid` 30
-- `quiz` 40
-- `rock-paper-scissors` 40
+- `basic-arrays` (25 Points)
+- `basic-functions` (25 Points)
+- `default-arguments` (25 Points)
+- `expressions-arrows` (25 Points)
+- `return-values` (25 Points)
+- `shop` (50 Points)
+- `tic-tac-toe` (50 Points)
 ])

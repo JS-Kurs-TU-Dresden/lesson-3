@@ -1,18 +1,23 @@
 // Replace the (___) with the correct values to make the code work.
+// For more info, see: https://javascript.info/function-expressions and https://javascript.info/arrow-functions-basics
 
-const addBrackets = text => "(" + text + ")";
+// Example: addBrackets("Hello") should return "(Hello)"
+const addBrackets = ___;
 
-const map = (array, callback) => {
-    const result = [];
+// Example: map([1, 2, 3], x => x * 2) should return [2, 4, 6]
+// Don't forget, a function can be thought of as a value
+___ = (array, callback) => {
+    const result = ___;
 
     for(let i = 0; i < array.length; i++) {
         const value = array[i];
-        const newValue = callback(value);
+        const newValue = ___;
 
-        result.push(newValue);
+        // add a value to the end of an array
+        result.push(___);
     }
 
-    return result;
+    return ___;
 }
 
 

@@ -1,27 +1,28 @@
 // Replace the (___) with the correct values to make the code work.
+// For more info, see: https://javascript.info/array
+
 
 // create an array with values from 1 to 10
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = ___
 
-const first = numbers[0];
-const last = numbers[numbers.length - 1];
+const first = ___
+const last = ___
 
 // swap the second and the fifth element
-const temp = numbers[1];
-numbers[1] = numbers[4];
-numbers[4] = temp;
+___
 
+// Example: sum([1, 2, 3]) should return 6
 function sum(array) {
     let result = 0;
 
-    for(let i = 0; i < array.length; i++) {
-        result += array[i];
+    for(let i = 0; i < ___; i++) {
+        result += ___;
     }
 
     return result;
 }
 
-const sumResult = sum(numbers);
+const sumResult = ___
 
 
 
@@ -42,5 +43,5 @@ const sumResult = sum(numbers);
 // Please do not change the code below. This code is used for testing your solution.
 
 export {
-    first, last, sum, sumResult
+    first, last, sum, sumResult, numbers
 }
