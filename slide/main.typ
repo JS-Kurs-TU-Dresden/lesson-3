@@ -194,7 +194,7 @@ sub(1, 2); // -1
 
 ```js
 console.log(appendA("Hello ")); // Hello A
-console.log(appendB("Hello ")); // TypeError: appendB is not a function
+console.log(appendB("Hello ")); // ReferenceError: appendB is not defined
 
 function appendA(a ) {
     return a + "A";
