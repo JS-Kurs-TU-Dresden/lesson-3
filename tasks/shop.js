@@ -1,7 +1,7 @@
 import { prompt } from '../prompt.js'
 
 // Code a small shop where you can buy items. The items and their prices are listed below.
-// 1. Promt the user to enter the amount of money they have.
+// 1. Prompt the user to enter the amount of money they have.
 // 2. Display all the items available for purchase using the printItems() function.
 // 3. Ask the user to enter the name of the item they want to buy.
 // 4. If the user can afford the item, subtract the price from the user's money.
@@ -14,8 +14,8 @@ import { prompt } from '../prompt.js'
 // 2. findItemIndex(item) - returns the index of the item in the items array. If the item is not found, return -1.
 
 
-const items =  ["Bread", "Milk", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
-const prices = [      1,      3,      2,            1,      1,       2,     3];
+const items = ["Bread", "Milk", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
+const prices = [1, 3, 2, 1, 1, 2, 3];
 
 // function buyItem(item) ...
 
@@ -25,7 +25,7 @@ const prices = [      1,      3,      2,            1,      1,       2,     3];
 
 
 function printItems() {
-    for(let i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
         console.log(items[i] + " - " + prices[i] + " Euro");
     }
 }
