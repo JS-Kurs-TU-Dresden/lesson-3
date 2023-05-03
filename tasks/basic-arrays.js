@@ -2,7 +2,7 @@
 // For more info, see: https://javascript.info/array
 
 
-// create an array with values from 1 to 10
+// create an array with values from 1 to 9
 const numbers = ___
 
 const first = ___
@@ -15,7 +15,7 @@ ___
 function sum(array) {
     let result = 0;
 
-    for(let i = 0; i < ___; i++) {
+    for (let i = 0; i < ___; i++) {
         result += ___;
     }
 
