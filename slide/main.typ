@@ -19,7 +19,7 @@
 #show: slides.with(
     author: "Nils Twelker",
     title: "Introcution to JavaScript",
-    short-title: "JavaScript Lesson 2",
+    short-title: "JavaScript Lesson 3",
     date: "March 2023",
     color: jsYellow,
 )
